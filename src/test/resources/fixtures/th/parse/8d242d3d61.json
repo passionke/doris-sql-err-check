@@ -1,0 +1,8 @@
+{
+  "query_id": "synthetic-bad-token",
+  "time": "2026-08-26 00:00:00",
+  "db": "test",
+  "error_code": 1105,
+  "error_message": "",
+  "stmt": "SELECT 1 +++ 2"
+}

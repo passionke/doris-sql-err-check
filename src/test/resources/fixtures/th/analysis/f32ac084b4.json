@@ -1,0 +1,8 @@
+{
+  "query_id": "45a5c74c96314d4f-a1268298399d131d",
+  "time": "2026-08-26 15:09:29.394",
+  "db": "ai_test",
+  "error_code": 1054,
+  "error_message": "errCode = 2, detailMessage = Unknown column 'store_id' in 'T0'",
+  "stmt": "EXPLAIN WITH positive_orders AS (\n  SELECT\n    T0.ds,\n    T0.store_id,\n    T0.org_id,\n    COUNT(T0.order_id) AS order_cnt\n  FROM `ai_test`.`w56fa4498_dataset_dwd_catering_order_detail_di` T0\n  WHERE T0.ds = '20260101'\n  GROUP BY T0.ds, T0.store_id, T0.org_id\n)\nSELECT * FROM positive_orders"
+}

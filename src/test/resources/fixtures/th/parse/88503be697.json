@@ -1,0 +1,8 @@
+{
+  "query_id": "synthetic-missing-paren",
+  "time": "2026-08-26 00:00:00",
+  "db": "test",
+  "error_code": 1105,
+  "error_message": "errCode = 2, detailMessage = Syntax error in line 1: SELECT * FROM (SELECT 1 AS a  ^ Encountered: <EOF> Expected ",
+  "stmt": "SELECT * FROM (SELECT 1 AS a"
+}

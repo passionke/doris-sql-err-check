@@ -1,0 +1,8 @@
+{
+  "query_id": "d71846d7572c44a3-b6dcf22e4f68247e",
+  "time": "2026-08-26 15:13:18.784",
+  "db": "ai_test",
+  "error_code": 1054,
+  "error_message": "errCode = 2, detailMessage = Unknown column 'settle_time' in 'T0'",
+  "stmt": "EXPLAIN WITH positive_orders AS (\n  SELECT\n    CAST(T0.settle_time AS DATE) AS ds,\n    T0.store_id,\n    T0.org_id,\n    COUNT(T0.order_id) AS order_cnt,\n    SUM(T0.actual_amount) AS gmv\n  FROM `ai_test`.`w56fa4498_dataset_dwd_catering_order_detail_di` T0\n  WHERE CAST(T0.settle_time AS DATE) = '20260101'\n  GROUP BY CAST(T0.settle_time AS DATE), T0.store_id, T0.org_id\n)\nSELECT * FROM positive_orders"
+}

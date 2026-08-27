@@ -1,0 +1,8 @@
+{
+  "query_id": "d356d4e3d84344ac-b3a71c18d664095a",
+  "time": "2026-08-26 13:56:07.697",
+  "db": "gposv2",
+  "error_code": 1105,
+  "error_message": "errCode = 2, detailMessage = Syntax error in line 37: LIMIT 0, 1000; ^ Encountered: LIMIT Expected: || ",
+  "stmt": "SELECT *\nFROM (SELECT\n  T0.order_sn AS `order_sn`,\n  T0.shop_id AS `shop_id`,\n  T1.name AS `shop_name`,\n  T0.pay_type AS `pay_type`,\n  T2.name AS `pay_type_name`,\n  CASE T0.pay_status\n  WHEN -1 THEN '未支付'\n  WHEN 1 THEN '支付成功'\n  WHEN 2 THEN '支付失败'\n  WHEN 3 THEN '已退款'\n  ELSE '未知状态'\nEND AS `pay_status`,\n  T0.pay_money AS `pay_money`,\n  T0.create_time AS `pay_time`\nFROM `ods_jdbth_order_pay_info_rt` AS `T0`\n  LEFT OUTER JOIN `ods_jdbth_shop_rt` AS `T1`\n    ON T0.shop_id = T1.shop_id\n  LEFT OUTER JOIN `ods_jdbth_shop_pay_type_rt` AS `T2`\n    ON T0.pay_type = T2.shop_pay_type_id) AS `alias_0`\nWHERE (\n  `pay_time` = DATE_FORMAT(\n    date_sub(FROM_UNIXTIME(CAST(@filter_date_start AS INT)), INTERVAL 1 HOUR),\n    '%Y-%m-%d 00:00:00'\n)\n  AND `pay_time` = DATE_FORMAT(\n    date_sub(FROM_UNIXTIME(CAST(@filter_date_end AS INT)), INTERVAL 1 HOUR),\n    '%Y-%m-%d 23:59:59'\n)\nLIMIT 0, 1000;"
+}

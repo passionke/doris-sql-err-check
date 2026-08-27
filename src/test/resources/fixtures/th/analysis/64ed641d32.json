@@ -1,0 +1,8 @@
+{
+  "query_id": "8be19d198e4c4863-86a3102a61032b5f",
+  "time": "2026-08-26",
+  "db": "olqx4h_dev",
+  "error_code": 1054,
+  "error_message": "errCode = 2, detailMessage = Unknown column 'staff_id' in 'table list'",
+  "stmt": "SELECT T0.pos_staff_id AS `pos_staff_id`, T0.order_sn AS `order_sn`, staff_id FROM dataset_x T0"
+}

@@ -1,0 +1,8 @@
+{
+  "query_id": "63d547f4ac0c44c3-90dd7b1826fe7794",
+  "time": "2026-08-25 19:25:35.045",
+  "db": "gposv2_z9823y",
+  "error_code": 1105,
+  "error_message": "errCode = 2, detailMessage = Syntax error in line 1: show compute groups      ^ Encountered: IDENTIFIER Expected ",
+  "stmt": "show compute groups"
+}

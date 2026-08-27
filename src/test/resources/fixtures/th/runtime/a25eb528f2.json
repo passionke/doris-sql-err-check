@@ -1,0 +1,8 @@
+{
+  "query_id": "rt0",
+  "time": "2026-08-26",
+  "db": "gposv2",
+  "error_code": 1105,
+  "error_message": "errCode = 2, detailMessage = Query timeout",
+  "stmt": "SELECT 0 FROM t"
+}

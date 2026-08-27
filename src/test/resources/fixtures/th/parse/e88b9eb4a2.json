@@ -1,0 +1,8 @@
+{
+  "query_id": "p7",
+  "time": "2026-08-26",
+  "db": "test",
+  "error_code": 1105,
+  "error_message": "",
+  "stmt": "WITH a AS (SELECT 1) SELECT * FORM a"
+}

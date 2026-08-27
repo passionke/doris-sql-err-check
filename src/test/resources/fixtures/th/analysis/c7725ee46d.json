@@ -1,0 +1,8 @@
+{
+  "query_id": "2c45eb9619f0469f-bf9b3c1e8800604b",
+  "time": "2026-08-26 21:14:55.708",
+  "db": "ai_test",
+  "error_code": 1054,
+  "error_message": "errCode = 2, detailMessage = Unknown column 'order_id' in 'table list'",
+  "stmt": "EXPLAIN WITH\ndwd_trade AS (SELECT ds, store_id, org_id, member_id, service_type, order_amount, actual_amount, discount_amount, service_fee, refund_amount, refund_ds, COUNT(*) AS order_cnt, SUM(actual_amount) AS gmv FROM `ai_test`.`we1a7be8d_dataset_dwd_catering_store_trade_di` GROUP BY ds, store_id, org_id, member_id, service_type, order_amount, actual_amount, discount_amount, service_fee, refund_amount, refund_ds),\norder_agg AS (SELECT ds, store_id, MAX(org_id) AS org_id, COALESCE(COUNT(order_id), 0) AS order_cnt, COALESCE(SUM(actual_amount), 0) AS gmv FROM dwd_trade GROUP BY ds, store_id)\nSELECT * FROM order_agg"
+}

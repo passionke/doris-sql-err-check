@@ -1,0 +1,8 @@
+{
+  "query_id": "3da19184df824bcd-9e426b1129167bf0",
+  "time": "2026-08-26",
+  "db": "olqx4h_rmct65_dev",
+  "error_code": 1054,
+  "error_message": "errCode = 2, detailMessage = Unknown column 'shop_id' in 'olqx4h.T0'",
+  "stmt": "SELECT\n  T0.shop_id AS `shop_id`,\n  T0.shop_name AS `shop_name`,\n  SUM(T0.pay_money) AS `pay_money_sum`\nFROM `dataset_order_pay_info` AS `T0`\nGROUP BY T0.shop_name\nORDER BY `pay_money_sum` DESC\nLIMIT 0, 1000"
+}

@@ -1,0 +1,2 @@
+# Placeholder so `go:embed` path exists before build-dist copies the fat jar.
+# Real app.jar is written by scripts/build-dist.sh (gitignored).

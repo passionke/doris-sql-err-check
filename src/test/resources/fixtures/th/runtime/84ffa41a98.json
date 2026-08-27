@@ -1,0 +1,8 @@
+{
+  "query_id": "64b97b579a894322-8ef806ddba61b914",
+  "time": "2026-08-26 23:06:50.214",
+  "db": "gposv2",
+  "error_code": 1105,
+  "error_message": "errCode = 2, detailMessage = Query timeout",
+  "stmt": "SELECT T0.store_id AS `store_id`, T0.pay_method AS `pay_method` FROM `dataset_dummy` AS `T0`"
+}

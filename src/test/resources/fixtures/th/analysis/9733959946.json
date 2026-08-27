@@ -1,0 +1,8 @@
+{
+  "query_id": "ba7af0ea9ebb444b-924f832d83fce55e",
+  "time": "2026-08-26",
+  "db": "gposv2",
+  "error_code": 1054,
+  "error_message": "errCode = 2, detailMessage = Unknown column 'ds' in 'gposv2.alias_0'",
+  "stmt": "SELECT * FROM (\nSELECT COALESCE(SUM(`t1`.`net_revenue`), 0) AS `total_sales_amount` FROM `gposv2`.`dataset_ba_dws_trade_store_h` `t1` WHERE `t1`.`store_id` = 'S1'\n) AS a LIMIT 1000"
+}

@@ -1,0 +1,12 @@
+target/
+dist/
+.tools/*
+!.tools/lib/
+!.tools/lib/**
+cmd/doris-sql-err-check/embed/app.jar
+*.iml
+.idea/
+.classpath
+.project
+.settings/
+src/main/antlr4/**/*.tokens

@@ -1,0 +1,8 @@
+{
+  "query_id": "bdb539d0ff5842ac-8115b1d52e520887",
+  "time": "2026-08-24 11:24:18.643",
+  "db": "gposv2_z9823y_dev",
+  "error_code": 1105,
+  "error_message": "errCode = 2, detailMessage = Syntax error in line 5: LIMIT 0, 200 ^ Encountered: LIMIT Expected ",
+  "stmt": "/* ApplicationName=DBeaver */ SELECT @@version_comment;\nSHOW VARIABLES LIKE '%nereids%';\nSHOW VARIABLES LIKE '%fallback%'\n\nLIMIT 0, 200"
+}

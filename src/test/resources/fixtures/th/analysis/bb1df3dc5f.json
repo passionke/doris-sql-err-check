@@ -1,0 +1,8 @@
+{
+  "query_id": "analysis-pad-11",
+  "time": "2026-08-26",
+  "db": "ai_test",
+  "error_code": 1054,
+  "error_message": "errCode = 2, detailMessage = Unknown column 'col_11' in 'table list'",
+  "stmt": "SELECT col_11, x FROM (SELECT 1 AS x) t WHERE col_11 IS NOT NULL"
+}

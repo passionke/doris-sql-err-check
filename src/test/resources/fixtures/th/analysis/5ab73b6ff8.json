@@ -1,0 +1,8 @@
+{
+  "query_id": "60d6853e63f34f00-bb47b91ba2dd0640",
+  "time": "2026-08-26",
+  "db": "gposv2",
+  "error_code": 1054,
+  "error_message": "errCode = 2, detailMessage = Unknown column 'ds' in 'gposv2.alias_0'",
+  "stmt": "INSERT INTO ads_x SELECT `ds`, `org_id`, `store_id` FROM (WITH balance_daily AS (SELECT T0.org_id AS org_id, T0.store_id AS store_id, T0.stat_date AS stat_date FROM t T0) SELECT * FROM balance_daily) alias_0"
+}

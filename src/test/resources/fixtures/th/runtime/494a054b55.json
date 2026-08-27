@@ -1,0 +1,8 @@
+{
+  "query_id": "10a9685c69294e47-958552bf3b70e6a4",
+  "time": "2026-08-26 23:06:50.069",
+  "db": "gposv2",
+  "error_code": 1105,
+  "error_message": "errCode = 2, detailMessage = Query timeout",
+  "stmt": "SELECT `category_name` AS `category_name`, round(sum(nvl(T0.sales_amt,0)),2) AS `sales_amt` FROM `dataset_dishes_category_ranking_hh_srt` AS `T0` WHERE T0.category_name IS NOT NULL GROUP BY `category_name`"
+}

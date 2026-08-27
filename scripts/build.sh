@@ -30,14 +30,21 @@ CP_RUNTIME="$ROOT/.tools/lib/antlr4-runtime-4.9.3.jar:$ROOT/.tools/lib/gson-2.11
 find "$GEN" src/main/java -name '*.java' > target/sources.txt
 javac --release 17 -encoding UTF-8 -cp "$CP_RUNTIME" -d target/classes @target/sources.txt
 
-# fat jar
+# fat jar: deps at root + application classes at root (Main-Class must resolve)
+rm -rf target/fat
 mkdir -p target/fat
-cd target/fat
-jar xf "$ROOT/.tools/lib/antlr4-runtime-4.9.3.jar"
-jar xf "$ROOT/.tools/lib/gson-2.11.0.jar"
-jar xf "$ROOT/.tools/lib/mysql-connector-j-8.4.0.jar"
-cp -R "$ROOT/target/classes/" .
-cd "$ROOT"
+(
+  cd target/fat
+  jar xf "$ROOT/.tools/lib/antlr4-runtime-4.9.3.jar"
+  jar xf "$ROOT/.tools/lib/gson-2.11.0.jar"
+  jar xf "$ROOT/.tools/lib/mysql-connector-j-8.4.0.jar"
+  cp -a "$ROOT/target/classes/." .
+)
+if [[ ! -f target/fat/io/kejiqing/dorissqlerr/cli/Main.class ]]; then
+  echo "fat jar layout wrong: missing io/kejiqing/dorissqlerr/cli/Main.class" >&2
+  find target/fat -name 'Main.class' | head -5 >&2 || true
+  exit 1
+fi
 jar cfe target/doris-sql-err-check-0.1.0-SNAPSHOT.jar io.kejiqing.dorissqlerr.cli.Main -C target/fat .
 chmod +x "$ROOT/bin/doris-sql-err-check" 2>/dev/null || true
 echo "Built target/doris-sql-err-check-0.1.0-SNAPSHOT.jar"

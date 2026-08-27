@@ -1,8 +1,9 @@
 target/
 dist/
-.tools/*
+.tools/
 !.tools/lib/
 !.tools/lib/**
+bin/doris-sql-err-check
 cmd/doris-sql-err-check/embed/app.jar
 *.iml
 .idea/
